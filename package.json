@@ -10,7 +10,7 @@
     "#src/*": "./dist/src/*"
   },
   "scripts": {
-    "dev": "tsx watch src/app.ts",
+    "dev": "tsx watch src/server.ts",
     "build": "tsc --project tsconfig.build.json",
     "start": "node dist/src/server.js",
     "lint": "eslint .",

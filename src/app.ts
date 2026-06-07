@@ -1,13 +1,10 @@
-import express from "express";
-import { createServer } from "node:http";
+import express,{Express} from "express";
 
-const app = express();
-const server = createServer(app);
 
-app.use(express.json());
 
-app.get('/',(req,res) =>{
-  res.send('Hello World');
-});
+export const createApp = ():Express =>{
+  const app = express();
+  app.use(express.json());
 
-server.listen(3000,()=>console.log('server started'))
+  return app;
+}
